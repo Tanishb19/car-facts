@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Facts</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+            color: #333;
+        }
+        #fact-box {
+            margin: 50px auto;
+            padding: 20px;
+            border-radius: 10px;
+            background: #ffffff;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+        }
+        button {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div id="fact-box">
+        <h1>Car Facts</h1>
+        <p id="fact">Click the button to learn a fact about cars!</p>
+        <button onclick="showFact()">Show a Fact</button>
+    </div>
+
+    <script>
+        const facts = [
+            "The first car was invented in 1886 by Karl Benz.",
+            "Electric cars were popular in the early 20th century.",
+            "The average car has about 30,000 parts.",
+            "The world’s best-selling car is the Toyota Corolla.",
+            "Henry Ford introduced the assembly line in 1913.",
+            "Airbags were first introduced in cars in the 1970s.",
+            "Modern cars can have up to 100 microprocessors.",
+            "The Bugatti Veyron can reach speeds over 400 km/h.",
+            "Self-driving cars use sensors, AI, and cameras.",
+            "The longest-lasting car is the Volvo P1800, driven 3 million miles."
+        ];
+
+        function showFact() {
+            const randomFact = facts[Math.floor(Math.random() * facts.length)];
+            document.getElementById("fact").innerText = randomFact;
+        }
+    </script>
+</body>
+</html>
